@@ -3,6 +3,7 @@ class Fixnum
     quarter_amount = 0
     dime_amount = 0
     nickel_amount = 0
+    penny_amount = 0
     counter = self
     until counter == 0
       if counter >= 25
@@ -19,10 +20,16 @@ class Fixnum
       while counter >= 5 do
         counter = counter - 5
        nickel_amount = nickel_amount + 1
-    else
+     end
+   else counter >= 1
+     while counter >= 1 do
+       counter = counter - 1
+       penny_amount = penny_amount + 1
+     end
+
 
     end
   end
-    "Your change is #{quarter_amount} quarters and #{dime_amount} dimes."
+    "Your change is #{quarter_amount} quarters and #{dime_amount} dimes and #{nickel_amount} nickels."
   end
 end
