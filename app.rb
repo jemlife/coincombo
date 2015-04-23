@@ -8,6 +8,6 @@ erb(:index)
 end
 
 get ('/result') do
-  @result = params.fetch('input').coin_combo()
+  @result = params.fetch('input').to_i().coin_combo()
   erb(:result)
 end
